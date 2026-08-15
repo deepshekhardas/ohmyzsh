@@ -175,7 +175,7 @@ plugins=(... git)
 | `grhk`                 | `git reset --keep`                                                                                                              |
 | `grhs`                 | `git reset --soft`                                                                                                              |
 | `gpristine`            | `git reset --hard && git clean --force -dfx`                                                                                    |
-| `gwipe`                | `git reset --hard && git clean --force -df`                                                                                     |
+| `greset-clean`         | `git reset --hard && git clean --force -df`                                                                                     |
 | `groh`                 | `git reset origin/$(git_current_branch) --hard`                                                                                 |
 | `grs`                  | `git restore`                                                                                                                   |
 | `grss`                 | `git restore --source`                                                                                                          |
@@ -243,6 +243,7 @@ receive further support.
 | `gap`    | `git add --patch`                                         | New alias: `gapa`                                     |
 | `gcl`    | `git config --list`                                       | New alias: `gcf`                                      |
 | `gdt`    | `git difftool`                                            | No replacement                                        |
+| `gwipe`  | `git reset --hard && git clean --force -df`               | New alias: `greset-clean`                             |
 
 ## Functions
 
