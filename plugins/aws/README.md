@@ -35,7 +35,7 @@ plugins=(... aws)
 
 * `aws_change_access_key`: changes the AWS access key of a profile.
 
-* `aws_profiles`: lists the available profiles in the  `$AWS_CONFIG_FILE` (default: `~/.aws/config`).
+* `aws_profiles`: lists the available profiles in the `$AWS_CONFIG_FILE` (default: `~/.aws/config`).
   Used to provide completion for the `asp` function.
 
 * `aws_regions`: lists the available regions.
