@@ -28,5 +28,7 @@ fi
   0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
   0="${${(M)0:#/*}:-$PWD/$0}"
 
-  command cp -f "${0:h}/completions/_gem" "$ZSH_CACHE_DIR/completions/_gem"
+  zmodload -F zsh/files b:zf_mv
+  local TMPPREFIX="$ZSH_CACHE_DIR/completions/_gem"
+  zf_mv -f -- =( cat -- "${0:h}/completions/_gem" ) "$TMPPREFIX"
 } &|
