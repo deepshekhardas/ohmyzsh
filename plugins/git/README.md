@@ -45,7 +45,7 @@ plugins=(... git)
 | `gbgD`                 | `LANG=C git branch --no-color -vv \| grep ": gone\]" \| cut -c 3- \| awk '"'"'{print $1}'"'"' \| xargs git branch -D`           |
 | `gbm`                  | `git branch --move`                                                                                                             |
 | `gbnm`                 | `git branch --no-merged`                                                                                                        |
-| `gbr`                  | `git branch --remote`                                                                                                           |
+| `gbr`                  | `git branch --remotes`                                                                                                          |
 | `ggsup`                | `git branch --set-upstream-to=origin/$(git_current_branch)`                                                                     |
 | `gbg`                  | `LANG=C git branch -vv \| grep ": gone\]"`                                                                                      |
 | `gco`                  | `git checkout`                                                                                                                  |
@@ -103,6 +103,7 @@ plugins=(... git)
 | `glods`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short`           |
 | `glol`                 | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`                        |
 | `glola`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all`                  |
+| `glolm`                | `git log $(git_main_branch) --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`     |
 | `glols`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat`                 |
 | `glo`                  | `git log --oneline --decorate`                                                                                                  |
 | `glog`                 | `git log --oneline --decorate --graph`                                                                                          |
