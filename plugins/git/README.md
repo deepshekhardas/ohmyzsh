@@ -45,7 +45,7 @@ plugins=(... git)
 | `gbgD`                 | `LANG=C git branch --no-color -vv \| grep ": gone\]" \| cut -c 3- \| awk '"'"'{print $1}'"'"' \| xargs git branch -D`           |
 | `gbm`                  | `git branch --move`                                                                                                             |
 | `gbnm`                 | `git branch --no-merged`                                                                                                        |
-| `gbr`                  | `git branch --remote`                                                                                                           |
+| `gbr`                  | `git branch --remotes`                                                                                                          |
 | `ggsup`                | `git branch --set-upstream-to=origin/$(git_current_branch)`                                                                     |
 | `gbg`                  | `LANG=C git branch -vv \| grep ": gone\]"`                                                                                      |
 | `gco`                  | `git checkout`                                                                                                                  |
@@ -103,6 +103,7 @@ plugins=(... git)
 | `glods`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short`           |
 | `glol`                 | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`                        |
 | `glola`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all`                  |
+| `glolm`                | `git log $(git_main_branch) --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`     |
 | `glols`                | `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat`                 |
 | `glo`                  | `git log --oneline --decorate`                                                                                                  |
 | `glog`                 | `git log --oneline --decorate --graph`                                                                                          |
@@ -255,6 +256,7 @@ receive further support.
 | `git_develop_branch`     | Returns the name of the “development” branch: `dev`, `devel`, `development` if they exist, `develop` otherwise |
 | `git_main_branch`        | Returns the name of the main branch: `main` if it exists, `master` otherwise                                   |
 | `grename <old> <new>`    | Renames branch `<old>` to `<new>`, including on the origin remote                                              |
+| `gcbc`                   | Copies the current branch name to the system clipboard (uses `clipcopy`)                                       |
 | `gbda`                   | Deletes all merged branches                                                                                    |
 | `gbds`                   | Deletes all squash-merged branches (**Note: performance degrades with number of branches**)                    |
 
